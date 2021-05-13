@@ -13,7 +13,7 @@ EXPOSE 4200
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
-RUN apt-get update && apt-get upgrade && apt-get install -qqy --no-install-recommends \
+RUN apt-get update && apt-get -y upgrade && apt-get install -qqy --no-install-recommends \
     ca-certificates \
     dumb-init \
     git \
